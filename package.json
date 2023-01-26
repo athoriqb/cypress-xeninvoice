@@ -1,0 +1,36 @@
+{
+  "name": "cypress-xeninvoice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress-api": "cypress run --spec 'cypress/features/**/ApiXenInvoice.feature'; npm run cucumber-report",
+    "cypress-web": "cypress run --spec 'cypress/features/**/WebXenInvoice.feature'; npm run cucumber-report",
+    "cucumber-report": "node cucumber-html-report.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/athoriqb/cypress-xeninvoice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/athoriqb/cypress-xeninvoice/issues"
+  },
+  "homepage": "https://github.com/athoriqb/cypress-xeninvoice#readme",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "cypress": "^12.4.0",
+    "@cypress/xpath": "^2.0.2",
+    "multiple-cucumber-html-reporter": "^3.1.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "formatter": "./cypress/cucumber-json/cucumber-json-formatter",
+      "output": "cypress/cucumber-json/cucumber.json"
+    }
+  }
+}

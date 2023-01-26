@@ -1,0 +1,6 @@
+{
+	"external_id": "invoice-{{$timestamp}}",
+	"amount": 1800000,
+	"payer_email": "customer@domain.com",
+	"description": "Invoice Demo #123"
+}
